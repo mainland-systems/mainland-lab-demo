@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malabar Diagnostics — Vidyanagar, Kasaragod | Home Sample Collection</title>
+  <meta name="description" content="Book diagnostic blood tests, health packages, and home sample collection in Kasaragod. Same-day reports on WhatsApp." />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --primary-soft: #f0fdfa;
+      --accent: #16a34a;
+      --accent-dark: #15803d;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding-bottom: 92px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Top Bar */
+    .topbar {
+      background: var(--primary-dark);
+      color: #ccfbf1;
+      font-size: 12px;
+      padding: 7px 0;
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .topbar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Header */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .brand-text h1 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    .brand-text span {
+      font-size: 12px;
+      color: var(--muted);
+      display: block;
+    }
+    .header-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: none;
+      border-radius: 9px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      padding: 10px 14px;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-whatsapp { background: var(--accent); color: #fff; }
+    .btn-whatsapp:hover { background: var(--accent-dark); }
+    .btn-outline {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover { background: #f1f5f9; }
+    .btn-sm { padding: 8px 12px; font-size: 13px; }
+
+    /* Hero */
+    .hero {
+      padding: 22px 0 16px;
+    }
+    .hero-card {
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: var(--shadow);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      color: #ccfbf1;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .hero h2 {
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .hero p {
+      font-size: 14px;
+      color: #e2e8f0;
+      margin-bottom: 16px;
+      max-width: 560px;
+    }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .hero-cta .btn-white {
+      background: #fff;
+      color: var(--primary-dark);
+    }
+    .hero-cta .btn-ghost {
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 12px;
+      color: #ccfbf1;
+    }
+
+    /* Prescription Banner */
+    .rx-banner {
+      background: var(--primary-soft);
+      border: 1px solid #99f6e4;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .rx-banner h3 { font-size: 14px; font-weight: 700; color: var(--primary-dark); }
+    .rx-banner p { font-size: 12px; color: var(--muted); }
+
+    /* Search & Filter */
+    .catalog-head {
+      position: sticky;
+      top: 63px;
+      z-index: 30;
+      background: var(--bg);
+      padding: 10px 0 12px;
+    }
+    .search-box {
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 13px 16px 13px 42px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 15px;
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+    .pills {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+    }
+    .pills::-webkit-scrollbar { display: none; }
+    .pill {
+      white-space: nowrap;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .pill.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    /* Test List */
+    .section-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .test-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .test-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s ease;
+    }
+    .test-card.selected {
+      border-color: var(--primary);
+      background: #f7fefc;
+    }
+    .test-info { flex: 1; min-width: 0; }
+    .test-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 3px;
+    }
+    .test-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: #f1f5f9;
+      color: var(--muted);
+    }
+    .tag.fasting { background: #fef3c7; color: #92400e; }
+    .tag.pkg { background: #dbeafe; color: #1e40af; }
+    .test-desc {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .test-tat {
+      font-size: 11.5px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .test-action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .price {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .add-btn {
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--primary);
+      background: var(--surface);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      min-width: 84px;
+    }
+    .add-btn.added {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Empty state */
+    .empty-state {
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 28px 18px;
+      text-align: center;
+    }
+    .empty-state p { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+
+    /* Info Sections */
+    .info-section {
+      margin-top: 28px;
+      display: grid;
+      gap: 12px;
+    }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .info-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .steps {
+      display: grid;
+      gap: 10px;
+    }
+    .step {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .step strong { color: var(--text); display: block; }
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 12px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .loc-grid {
+      display: grid;
+      gap: 8px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      padding: 12px 0;
+    }
+    .mainland-credit {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    /* Floating Cart Bar */
+    .cart-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 50;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+      transform: translateY(120%);
+      transition: transform 0.22s ease;
+    }
+    .cart-bar.visible { transform: translateY(0); }
+    .cart-bar-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .cart-summary { font-size: 12.5px; color: var(--muted); }
+    .cart-total { font-size: 18px; font-weight: 800; color: var(--text); }
+
+    /* Modal / Drawer */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      z-index: 60;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      background: var(--surface);
+      width: 100%;
+      max-width: 540px;
+      max-height: 92vh;
+      overflow-y: auto;
+      border-radius: 18px 18px 0 0;
+      padding: 20px 18px 24px;
+      box-shadow: var(--shadow-lg);
+    }
+    @media (min-width: 640px) {
+      .modal-backdrop { align-items: center; padding: 16px; }
+      .modal { border-radius: 16px; }
+      .hero h2 { font-size: 28px; }
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .modal-header h3 { font-size: 18px; font-weight: 800; }
+    .close-btn {
+      background: #f1f5f9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      color: var(--text);
+    }
+    .selected-list {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 14px;
+    }
+    .selected-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13.5px;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .selected-item:last-child { border-bottom: none; }
+    .remove-link {
+      background: none;
+      border: none;
+      color: #dc2626;
+      font-size: 12px;
+      cursor: pointer;
+      margin-left: 8px;
+      font-weight: 600;
+    }
+    .modal-total-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 800;
+      font-size: 15px;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed #cbd5e1;
+    }
+    .form-group { margin-bottom: 12px; }
+    .form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 14px;
+      background: #fff;
+      color: var(--text);
+    }
+    .toggle-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .toggle-opt {
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+    }
+    .toggle-opt.active {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+    }
+    .helper-note {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Home Collection • 6:30 AM – 7:30 PM</span>
+      <a id="topCallLink" href="tel:+919876543210">Call Lab</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">M</div>
+        <div class="brand-text">
+          <h1 id="labNameDisplay">Malabar Diagnostics</h1>
+          <span id="labLocDisplay">Vidyanagar, Kasaragod</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <a id="headerCallBtn" href="tel:+919876543210" class="btn btn-outline btn-sm">Call</a>
+        <button id="headerRxBtn" class="btn btn-whatsapp btn-sm">WhatsApp</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-card">
+        <span class="hero-badge">Kasaragod Home Collection</span>
+        <h2>Book Blood Tests &amp; Checkups in 30 Seconds.</h2>
+        <p>Select your tests below, pick a time slot, and confirm directly on WhatsApp. Trained phlebotomists &amp; same-day digital reports.</p>
+        <div class="hero-cta">
+          <a href="#catalog" class="btn btn-white">Browse Tests &amp; Prices</a>
+          <button id="heroRxBtn" class="btn btn-ghost">Send Prescription on WhatsApp</button>
+        </div>
+        <div class="trust-strip">
+          <span>✓ Same-Day WhatsApp Reports</span>
+          <span>✓ Free Home Collection above ₹600</span>
+          <span>✓ Transparent Pricing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prescription Shortcut -->
+    <section class="rx-banner">
+      <div>
+        <h3>Have a doctor's prescription?</h3>
+        <p>Send a photo directly on WhatsApp — we'll reply with the exact quote &amp; slot.</p>
+      </div>
+      <button id="bannerRxBtn" class="btn btn-whatsapp btn-sm">Send Photo</button>
+    </section>
+
+    <!-- Searchable Test Catalog -->
+    <section id="catalog">
+      <div class="catalog-head">
+        <div class="search-box">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search tests (e.g., Thyroid, CBC, HbA1c, Vitamin D)..." autocomplete="off" />
+        </div>
+        <div class="pills" id="categoryPills"></div>
+      </div>
+
+      <div class="section-meta">
+        <span id="resultCount">Showing all tests</span>
+        <span>Tap <strong>+ Add</strong> to build your booking</span>
+      </div>
+
+      <div class="test-grid" id="testGrid"></div>
+    </section>
+
+    <!-- How It Works & Location -->
+    <section class="info-section">
+      <div class="info-card">
+        <h3>How Home Collection Works</h3>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div><strong>Select tests or send prescription</strong>Pick from the price list above and confirm your time slot on WhatsApp.</div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div><strong>Sample collected at your doorstep</strong>Our technician visits your home in Kasaragod with sealed sterile kits.</div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div><strong>Same-day PDF report on WhatsApp</strong>Receive verified reports directly on your phone — no second trip needed.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>Visit Our Lab</h3>
+        <div class="loc-grid">
+          <div><strong>Address:</strong> Near Municipal Stadium Road, Vidyanagar, Kasaragod, Kerala 671123</div>
+          <div><strong>Lab Hours:</strong> Mon – Sat: 6:30 AM – 7:30 PM | Sun: 7:00 AM – 1:00 PM</div>
+          <div><strong>Service Areas:</strong> Vidyanagar, Nullippady, Thalangara, New Bus Stand, Cherkala, Chengala, Mogral, Udma</div>
+          <div style="margin-top: 6px; display: flex; gap: 8px; flex-wrap: wrap;">
+            <a id="mapsLink" href="https://maps.google.com/?q=Vidyanagar+Kasaragod" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open in Google Maps</a>
+            <a id="footerCallBtn" href="tel:+919876543210" class="btn btn-primary btn-sm">Call Reception</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2026 Malabar Diagnostics, Kasaragod. Demo Prototype.</div>
+      <div class="mainland-credit">Booking System by Mainland</div>
+    </div>
+  </footer>
+
+  <!-- Floating Cart Bar -->
+  <div class="cart-bar" id="cartBar">
+    <div class="cart-bar-inner">
+      <div>
+        <div class="cart-summary" id="cartCountText">0 tests selected</div>
+        <div class="cart-total" id="cartTotalText">₹0</div>
+      </div>
+      <button id="openModalBtn" class="btn btn-whatsapp">Book on WhatsApp →</button>
+    </div>
+  </div>
+
+  <!-- Booking Modal -->
+  <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Confirm Your Booking</h3>
+        <button class="close-btn" id="closeModalBtn" aria-label="Close">×</button>
+      </div>
+
+      <div class="selected-list" id="modalSelectedList"></div>
+
+      <form id="bookingForm">
+        <div class="form-group">
+          <label>Collection Type</label>
+          <div class="toggle-row">
+            <button type="button" class="toggle-opt active" data-mode="Home Collection">Home Collection</button>
+            <button type="button" class="toggle-opt" data-mode="Lab Visit">Visit Lab</button>
+          </div>
+          <div class="helper-note" id="collectionFeeNote">Free home collection for orders ₹600+. (₹100 below ₹600)</div>
+        </div>
+
+        <div class="form-group">
+          <label for="patientName">Patient Name</label>
+          <input type="text" id="patientName" placeholder="e.g., Rahul Nair" required />
+        </div>
+
+        <div class="form-group" id="areaGroup">
+          <label for="patientArea">Area / Landmark in Kasaragod</label>
+          <input type="text" id="patientArea" list="ksdAreas" placeholder="e.g., Vidyanagar, Nullippady, Thalangara" required />
+          <datalist id="ksdAreas">
+            <option value="Vidyanagar"></option>
+            <option value="Nullippady"></option>
+            <option value="Thalangara"></option>
+            <option value="New Bus Stand / Town"></option>
+            <option value="Cherkala"></option>
+            <option value="Chengala"></option>
+            <option value="Anangoor"></option>
+            <option value="Udma"></option>
+            <option value="Mogral Puthur"></option>
+          </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="timeSlot">Preferred Time Slot</label>
+          <select id="timeSlot" required>
+            <option value="Morning Fasting (6:30 AM – 9:30 AM)">Morning Fasting (6:30 AM – 9:30 AM)</option>
+            <option value="Mid-Morning (9:30 AM – 1:00 PM)">Mid-Morning (9:30 AM – 1:00 PM)</option>
+            <option value="Evening (4:00 PM – 7:00 PM)">Evening (4:00 PM – 7:00 PM)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding: 13px; font-size: 15px;">
+          Send Booking on WhatsApp →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // =========================================================
+    // QUICK CONFIG — Edit these values when pitching a real lab
+    // =========================================================
+    const CONFIG = {
+      labName: "Malabar Diagnostics",
+      location: "Vidyanagar, Kasaragod",
+      whatsappNumber: "919876543210", // Replace with your WhatsApp number (with 91, no +) for live demos
+      phoneDisplay: "+919876543210",
+      freeHomeCollectionMin: 600,
+      homeCollectionFee: 100
+    };
+
+    const TESTS = [
+      { id: 1, name: "Complete Blood Count (CBC)", category: "Routine", price: 300, tat: "Same day (4 hrs)", fasting: false, desc: "Checks hemoglobin, WBC, platelets, and overall blood health." },
+      { id: 2, name: "HbA1c (3-Month Diabetes Test)", category: "Diabetes", price: 450, tat: "Same day", fasting: false, desc: "Average blood sugar levels over the past 2–3 months." },
+      { id: 3, name: "Fasting Blood Sugar (FBS)", category: "Diabetes", price: 100, tat: "Same day (2 hrs)", fasting: true, desc: "Measures glucose after 8–10 hours of overnight fasting." },
+      { id: 4, name: "Thyroid Profile (T3, T4, TSH)", category: "Thyroid & Hormones", price: 500, tat: "Same day", fasting: false, desc: "Complete thyroid function screening." },
+      { id: 5, name: "TSH (Thyroid Stimulating Hormone)", category: "Thyroid & Hormones", price: 250, tat: "Same day", fasting: false, desc: "Primary screening test for hypothyroidism or hyperthyroidism." },
+      { id: 6, name: "Lipid Profile (Cholesterol)", category: "Organ Health", price: 550, tat: "Same day", fasting: true, desc: "Total cholesterol, HDL, LDL, and triglycerides." },
+      { id: 7, name: "Liver Function Test (LFT)", category: "Organ Health", price: 600, tat: "Same day", fasting: false, desc: "Bilirubin, SGOT, SGPT, and liver enzyme panel." },
+      { id: 8, name: "Kidney Function Test (KFT / RFT)", category: "Organ Health", price: 600, tat: "Same day", fasting: false, desc: "Creatinine, urea, uric acid, and electrolytes." },
+      { id: 9, name: "Vitamin D (25-OH)", category: "Vitamins", price: 1100, tat: "Same day evening", fasting: false, desc: "Checks bone strength, immunity, and fatigue causes." },
+      { id: 10, name: "Vitamin B12", category: "Vitamins", price: 750, tat: "Same day evening", fasting: false, desc: "Evaluates nerve health, energy, and B12 deficiency." },
+      { id: 11, name: "Urine Routine Examination", category: "Routine", price: 150, tat: "Same day (2 hrs)", fasting: false, desc: "Screens for urinary infections, sugar, and kidney markers." },
+      { id: 12, name: "Fever Panel (Basic)", category: "Packages", price: 850, tat: "Same day (4 hrs)", fasting: false, desc: "CBC, Dengue NS1, Malaria antigen, and Urine Routine." },
+      { id: 13, name: "Diabetes Care Package", category: "Packages", price: 990, tat: "Same day", fasting: true, desc: "HbA1c, Fasting Sugar, Lipid Profile, and Creatinine." },
+      { id: 14, name: "Essential Full Body Checkup (55+ Params)", category: "Packages", price: 1490, tat: "Same day evening", fasting: true, desc: "CBC, LFT, KFT, Lipid, Thyroid, FBS, and Urine Routine." },
+      { id: 15, name: "Comprehensive Health Checkup (70+ Params)", category: "Packages", price: 2490, tat: "Next morning", fasting: true, desc: "Essential Full Body + HbA1c, Vitamin D, and Vitamin B12." }
+    ];
+
+    const CATEGORIES = ["All", "Packages", "Routine", "Diabetes", "Thyroid & Hormones", "Organ Health", "Vitamins"];
+
+    // State
+    let activeCategory = "All";
+    let searchQuery = "";
+    let selectedIds = new Set();
+    let collectionMode = "Home Collection";
+
+    // Elements
+    const categoryPillsEl = document.getElementById("categoryPills");
+    const testGridEl = document.getElementById("testGrid");
+    const searchInput = document.getElementById("searchInput");
+    const resultCountEl = document.getElementById("resultCount");
+    const cartBar = document.getElementById("cartBar");
+    const cartCountText = document.getElementById("cartCountText");
+    const cartTotalText = document.getElementById("cartTotalText");
+    const bookingModal = document.getElementById("bookingModal");
+    const modalSelectedList = document.getElementById("modalSelectedList");
+    const collectionFeeNote = document.getElementById("collectionFeeNote");
+    const areaGroup = document.getElementById("areaGroup");
+    const patientAreaInput = document.getElementById("patientArea");
+
+    // Initialize brand links
+    document.getElementById("labNameDisplay").textContent = CONFIG.labName;
+    document.getElementById("labLocDisplay").textContent = CONFIG.location;
+    ["topCallLink", "headerCallBtn", "footerCallBtn"].forEach(id => {
+      document.getElementById(id).href = `tel:${CONFIG.phoneDisplay}`;
+    });
+
+    function openPrescriptionWhatsApp() {
+      const msg = `Hi ${CONFIG.labName}, I would like to share my doctor's prescription to get test pricing and book a slot.`;
+      window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+    ["headerRxBtn", "heroRxBtn", "bannerRxBtn"].forEach(id => {
+      document.getElementById(id).addEventListener("click", openPrescriptionWhatsApp);
+    });
+
+    function renderPills() {
+      categoryPillsEl.innerHTML = CATEGORIES.map(cat => `
+        <button class="pill ${cat === activeCategory ? "active" : ""}" data-cat="${cat}">${cat}</button>
+      `).join("");
+      categoryPillsEl.querySelectorAll(".pill").forEach(btn => {
+        btn.addEventListener("click", () => {
+          activeCategory = btn.dataset.cat;
+          renderPills();
+          renderTests();
+        });
+      });
+    }
+
+    function getSelectedTests() {
+      return TESTS.filter(t => selectedIds.has(t.id));
+    }
+
+    function renderTests() {
+      const q = searchQuery.trim().toLowerCase();
+      const filtered = TESTS.filter(t => {
+        const matchCat = activeCategory === "All" || t.category === activeCategory;
+        const matchQuery = !q || t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q) || t.category.toLowerCase().includes(q);
+        return matchCat && matchQuery;
+      });
+
+      resultCountEl.textContent = `Showing ${filtered.length} ${filtered.length === 1 ? "test" : "tests"}`;
+
+      if (filtered.length === 0) {
+        testGridEl.innerHTML = `
+          <div class="empty-state">
+            <p>No test matched "<strong>${searchQuery}</strong>". Have a doctor's prescription?</p>
+            <button class="btn btn-whatsapp btn-sm" id="emptyRxBtn">Send Prescription on WhatsApp</button>
+          </div>
+        `;
+        document.getElementById("emptyRxBtn").addEventListener("click", openPrescriptionWhatsApp);
+        return;
+      }
+
+      testGridEl.innerHTML = filtered.map(t => {
+        const isSelected = selectedIds.has(t.id);
+        return `
+          <article class="test-card ${isSelected ? "selected" : ""}">
+            <div class="test-info">
+              <div class="test-top">
+                <span class="test-name">${t.name}</span>
+                ${t.category === "Packages" ? `<span class="tag pkg">Package</span>` : ""}
+                ${t.fasting ? `<span class="tag fasting">Fasting Req.</span>` : ""}
+              </div>
+              <div class="test-desc">${t.desc}</div>
+              <div class="test-tat">Report: ${t.tat}</div>
+            </div>
+            <div class="test-action">
+              <div class="price">₹${t.price}</div>
+              <button class="add-btn ${isSelected ? "added" : ""}" data-id="${t.id}">
+                ${isSelected ? "✓ Added" : "+ Add"}
+              </button>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      testGridEl.querySelectorAll(".add-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = Number(btn.dataset.id);
+          if (selectedIds.has(id)) selectedIds.delete(id);
+          else selectedIds.add(id);
+          renderTests();
+          updateCartBar();
+        });
+      });
+    }
+
+    function updateCartBar() {
+      const items = getSelectedTests();
+      const total = items.reduce((sum, t) => sum + t.price, 0);
+      cartCountText.textContent = `${items.length} ${items.length === 1 ? "test" : "tests"} selected`;
+      cartTotalText.textContent = `₹${total}`;
+      cartBar.classList.toggle("visible", items.length > 0);
+    }
+
+    function renderModalSummary() {
+      const items = getSelectedTests();
+      if (items.length === 0) {
+        closeModal();
+        return;
+      }
+      const subtotal = items.reduce((sum, t) => sum + t.price, 0);
+      const needsFee = collectionMode === "Home Collection" && subtotal < CONFIG.freeHomeCollectionMin;
+      const fee = needsFee ? CONFIG.homeCollectionFee : 0;
+      const grandTotal = subtotal + fee;
+
+      collectionFeeNote.textContent = collectionMode === "Home Collection"
+        ? (needsFee
+            ? `Home collection fee: ₹${CONFIG.homeCollectionFee} (Free above ₹${CONFIG.freeHomeCollectionMin})`
+            : `✓ Free home collection unlocked!`)
+        : `Walk-in visit at ${CONFIG.location}`;
+
+      modalSelectedList.innerHTML = `
+        ${items.map(t => `
+          <div class="selected-item">
+            <span>${t.name}</span>
+            <span>
+              <strong>₹${t.price}</strong>
+              <button type="button" class="remove-link" data-remove="${t.id}">Remove</button>
+            </span>
+          </div>
+        `).join("")}
+        ${needsFee ? `<div class="selected-item"><span>Home Collection Fee</span><span>₹${fee}</span></div>` : ""}
+        <div class="modal-total-row">
+          <span>Estimated Total</span>
+          <span>₹${grandTotal}</span>
+        </div>
+      `;
+
+      modalSelectedList.querySelectorAll("[data-remove]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          selectedIds.delete(Number(btn.dataset.remove));
+          renderTests();
+          updateCartBar();
+          renderModalSummary();
+        });
+      });
+    }
+
+    function openModal() {
+      renderModalSummary();
+      bookingModal.classList.add("open");
+      bookingModal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeModal() {
+      bookingModal.classList.remove("open");
+      bookingModal.setAttribute("aria-hidden", "true");
+    }
+
+    // Event Listeners
+    searchInput.addEventListener("input", e => {
+      searchQuery = e.target.value;
+      renderTests();
+    });
+
+    document.getElementById("openModalBtn").addEventListener("click", openModal);
+    document.getElementById("closeModalBtn").addEventListener("click", closeModal);
+    bookingModal.addEventListener("click", e => {
+      if (e.target === bookingModal) closeModal();
+    });
+
+    document.querySelectorAll(".toggle-opt").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".toggle-opt").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        collectionMode = btn.dataset.mode;
+        const isHome = collectionMode === "Home Collection";
+        areaGroup.style.display = isHome ? "block" : "none";
+        patientAreaInput.required = isHome;
+        renderModalSummary();
+      });
+    });
+
+    document.getElementById("bookingForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const items = getSelectedTests();
+      if (items.length === 0) return;
+
+      const name = document.getElementById("patientName").value.trim();
+      const area = patientAreaInput.value.trim();
+      const slot = document.getElementById("timeSlot").value;
+      const subtotal = items.reduce((sum, t) => sum + t.price, 0);
+      const fee = (collectionMode === "Home Collection" && subtotal < CONFIG.freeHomeCollectionMin) ? CONFIG.homeCollectionFee : 0;
+      const total = subtotal + fee;
+
+      const testLines = items.map(t => `• ${t.name} (₹${t.price})`).join("\n");
+      const lines = [
+        `*New Lab Booking — ${CONFIG.labName}*`,
+        ``,
+        `*Patient:* ${name}`,
+        `*Type:* ${collectionMode}`,
+        collectionMode === "Home Collection" ? `*Area:* ${area}` : null,
+        `*Slot:* ${slot}`,
+        ``,
+        `*Selected Tests:*`,
+        testLines,
+        fee > 0 ? `• Home Collection Fee (₹${fee})` : null,
+        ``,
+        `*Estimated Total:* ₹${total}`
+      ].filter(Boolean).join("\n");
+
+      window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(lines)}`, "_blank");
+    });
+
+    // Boot
+    renderPills();
+    renderTests();
+  </script>
+</body>
+</html>
